@@ -2,6 +2,7 @@ import os
 import json
 import pandas as pd
 import openai
+import streamlit as st
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -112,7 +113,18 @@ def answer_user_question(question: str) -> str:
     results = query_kg(intent, kg_triples)
     return generate_answer(question, results)
 
+# ─── Streamlit UI ────────────────────────────────────────────────────────
+st.set_page_config(page_title="BioGraphGPT", layout="wide")
+st.title("🧬 BioGraphGPT: Biomedical Q&A over Knowledge Graph")
+st.markdown("Ask about drugs, genes, and diseases.")
 
-if __name__ == "__main__":
-    q = input("💬 Ask a biomedical question: ")
-    print("\n🧠 Answer:\n", answer_user_question(q))
+question = st.text_input("Enter your question here:")
+if st.button("Get Answer"):
+    if question:
+        with st.spinner("Thinking…"):
+            answer = answer_user_question(question)
+        st.subheader("Answer:")
+        st.write(answer)
+    else:
+        st.warning("Please type a question first.")
+
