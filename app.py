@@ -3,11 +3,10 @@ import json
 import pandas as pd
 import openai
 import streamlit as st
-st.write("🚀 app.py is live!") 
 from dotenv import load_dotenv
 
 load_dotenv()
-client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = openai.OpenAI(api_key="OPENAI_API_KEY")
 
 kg_triples = pd.read_parquet("kg_triples.parquet")
 
