@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-kg_triples = pd.read_parquet("kg_triplees.parquet")
+kg_triples = pd.read_parquet("kg_triples.parquet")
 
 
 def parse_question_with_llm(question: str) -> dict:
