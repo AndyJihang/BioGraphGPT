@@ -5,7 +5,6 @@ import openai
 import streamlit as st
 from dotenv import load_dotenv
 
-load_dotenv()
 client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 kg_triples = pd.read_parquet("kg_triples.parquet")
