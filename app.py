@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-kg_triples = pd.read_csv("/Users/jihangbc.edu/Downloads/kg_triples.csv")
+kg_triples = pd.read_csv("kg_triples.csv")
 
 
 def parse_question_with_llm(question: str) -> dict:
