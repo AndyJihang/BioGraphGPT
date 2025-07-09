@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import openai
 import streamlit as st
-from dotenv import load_dotenv
+st.write("🚀 app.py is live!") 
 
 client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
