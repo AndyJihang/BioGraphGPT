@@ -6,34 +6,17 @@ BioGraphGPT is a lightweight Streamlit app that enables natural language questio
 
  - 🧠 Natural language understanding with GPT-4
  - 🔍 Query biomedical knowledge graphs with ease
- - 🧬 Supports drug-to-gene, gene-to-disease, drug-to-disease, and disease-to-drug queries
+ - 🧬 Supports:
+    - drug → gene
+    - gene → disease
+    - drug → disease
+    - disease → drug queries
  - 🖥️ User-friendly Streamlit interface
 
-📁 File Structure
 
-OpenAIData-App/
 
-│
-├── app.py                   # Main Streamlit application
-├── kg_triples.parquet       # Biomedical knowledge graph data
-├── requirements.txt         # Python dependencies
-├── .streamlit/
-│   └── secrets.toml         # API key (OpenAI)
-├── README.md                # This file
-🔧 Setup & Run Locally
-Clone the repo
-git clone https://github.com/AndyJihang/OpenAIData-App.git
-cd OpenAIData-App
-Install dependencies
-pip install -r requirements.txt
-Add OpenAI API key
-Create a file .streamlit/secrets.toml with:
-OPENAI_API_KEY = "your_openai_api_key_here"
-Run the app
-streamlit run app.py
 💡 Example Questions
-What genes does Gefitinib affect?
-Which drugs treat lung cancer?
-What diseases are associated with BRCA1?
-📜 License
-MIT License
+
+ - What genes does Gefitinib affect?
+ - Which drugs treat lung cancer?
+ - What diseases are associated with BRCA1?
